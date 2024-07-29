@@ -1,4 +1,6 @@
+import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 function Header() {
   return (
@@ -14,7 +16,14 @@ function Header() {
           <Link href="">Tour</Link> <Link href="">Contact</Link>{" "}
         </nav>
         {/* user profile */}
-        <p>clerk</p>
+        <SignedOut>
+          <SignInButton>
+            <Button className="bg-[#43B97F] hover:bg-green-700">Sign In</Button>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </header>
   );
