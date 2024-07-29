@@ -9,10 +9,10 @@ function Header() {
       {/* nav menu */}
       <div className="flex space-x-10">
         {/* nav link */}
-        <div className="flex space-x-5">
+        <nav className="flex space-x-5">
           <Link href="">Home</Link> <Link href="">Destinations</Link>{" "}
           <Link href="">Tour</Link> <Link href="">Contact</Link>{" "}
-        </div>
+        </nav>
         {/* user profile */}
         <p>clerk</p>
       </div>

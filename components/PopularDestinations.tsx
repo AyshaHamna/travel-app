@@ -38,12 +38,13 @@ function PopularDestinations() {
                 className="rounded-xl"
               />
             </div>
-
-            <div className="absolute inset-0 bottom-0 bg-black bg-opacity-50 flex flex-cols gap-2 items-end p-5 text-white rounded-xl">
-              <h3 className="text-lg font-semibold">{destination.name}</h3>
-              <div>
-                <MapPin className="h-5 w-5 flex" />
-                <p className="mt-2">{destination.location}</p>
+            <div className="">
+              <div className="absolute inset-0 items-start justify-end p-4 w-full bg-black bg-opacity-25 flex flex-col text-gray-100 rounded-xl">
+                <h3 className="text-lg font-semibold">{destination.name}</h3>
+                <div className="flex items-center gap-1 text-gray-200 text-sm">
+                  <MapPin className="h-4 w-4" />
+                  <p>{destination.location}</p>
+                </div>
               </div>
             </div>
           </div>

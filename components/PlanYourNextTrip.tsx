@@ -23,7 +23,7 @@ const steps = [
 
 function PlanYourNextTrip() {
   return (
-    <section className="max-w-6xl mx-auto flex justify-around py-16">
+    <section className="max-w-6xl mx-auto flex flex-col gap-5 justify-around py-16">
       <div className="">
         <h1 className="text-4xl font-semibold text-center mb-16">
           Plan Your Next Trip
@@ -39,7 +39,7 @@ function PlanYourNextTrip() {
         ))}
       </div>
       <div className="">
-        <Image src="/traveller.png" alt="Traveller" width="473" height="473" />
+        <Image src="/traveller.png" alt="Traveller" width="473" height="473" className=""/>
       </div>
     </section>
   );

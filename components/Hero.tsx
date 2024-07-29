@@ -8,13 +8,13 @@ function Hero() {
       <h1 className="text-6xl font-semibold mb-20">Explore Sri Lanka</h1>
 
       {/* search bar */}
-      <div className="flex space-x-2 justify-between rounded-md bg-black bg-opacity-50 min-w-4xl">
+      <div className="flex space-x-2 w-full mx-auto justify-between rounded-full  border-2 border-gray-300 bg-black bg-opacity-20 sm:w-2/3 lg:w-1/2 ">
         <Input
           type="text"
           placeholder="Search Destination, City"
-          className=""
+          className="bg-transparent border-none text-white placeholder:text-gray-300 rounded-full focus:outline-none focus:ring-0"
         />
-        <Button className="">
+        <Button className="bg-transparent text-gray-300">
           <Search />
         </Button>
       </div>

@@ -1,9 +1,9 @@
-import Image from "next/image";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import PopularDestinations from "@/components/PopularDestinations";
 import PlanYourNextTrip from "@/components/PlanYourNextTrip";
 import TripTours from "@/components/TripTours";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
         <PopularDestinations />
         <PlanYourNextTrip />
         <TripTours />
+        <Footer />
       </main>
     </div>
   );
