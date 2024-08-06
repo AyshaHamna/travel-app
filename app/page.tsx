@@ -11,7 +11,7 @@ export default function Home() {
       className="p-5 bg-slate-500 min-h-screen bg-cover bg-center bg-no-repeat px-10"
       style={{ backgroundImage: "url('/background-image.png" }}
     >
-      <Header />
+      <Header textColor="text-white"/>
       <main>
         <Hero />
         <PopularDestinations />

@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { error } from "console";
 import { ChangeEvent, FormEvent, useState } from "react";
 
 function AdminPage() {
@@ -18,11 +19,30 @@ function AdminPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(
       `${formData.name}, ${formData.duration},  ${formData.price},  ${formData.description}`
     );
+
+    try {
+      const res = await fetch("api/tours", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      console.log("res: ", res);
+
+      if (!res.ok) throw new Error("Something went wrong");
+
+      const data = await res.json();
+      console.log("Tour added: ", data);
+    } catch (error) {
+      console.log("Failed to add tour, ", error);
+    }
   };
 
   return (
