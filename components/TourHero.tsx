@@ -3,7 +3,7 @@ import seaImage from "/Images/sea.jpg";
 
 function TourHero() {
   return (
-    <section className="text-white flex flex-col items-center justify-center mx-auto py-16">
+    <section className="text-white flex flex-col items-center justify-center mx-auto py-5">
       <div className="relative w-full">
         {/* Image */}
         <Image
@@ -17,7 +17,7 @@ function TourHero() {
 
         {/* Text Content */}
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <h1 className="text-4xl text-white font-bold text-center">Southern Sri Lanka</h1>
+          <h1 className="text-3xl text-white font-bold text-center tracking-wider sm:text-4xl lg:text-5xl">Southern Sri Lanka</h1>
           <div className="absolute right-0 bottom-0 bg-[#ECA400] rounded-xl px-5 py-2 m-7 text-white text-md">
             5 Days Trip
           </div>

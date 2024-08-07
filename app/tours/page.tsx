@@ -15,6 +15,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 function ToursPage() {
+  
   const tours = [
     {
       id: "1",
@@ -37,6 +38,23 @@ function ToursPage() {
         "Entrance Fee to Attractions",
         "Tour Guide Services",
       ],
+      itinerary: [
+        {
+          day: 1,
+          title: 'Mirissa',
+          duration: '3 hours',
+          description: 'Lorem ipsum dolor sit amet...',
+          imageSrc: "/surf.jpg",
+        },
+        {
+          day: 2,
+          title: 'Galle',
+          duration: '1 hours',
+          description: 'Lorem ipsum dolor sit amet...',
+          imageSrc: "/surf.jpg",
+        },
+        // Add more days...
+      ],
       imageUrl: "/surf.jpg",
       recommended: true,
     },
@@ -54,6 +72,23 @@ function ToursPage() {
         "Entrance Fee to Attractions",
         "Tour Guide Services",
       ],
+      itinerary: [
+        {
+          day: 1,
+          title: 'Mirissa',
+          duration: '3 hours',
+          description: 'Lorem ipsum dolor sit amet...',
+          imageSrc: "/surf.jpg",
+        },
+        {
+          day: 2,
+          title: 'Galle',
+          duration: '1 hours',
+          description: 'Lorem ipsum dolor sit amet...',
+          imageSrc: "/surf.jpg",
+        },
+        // Add more days...
+      ],
       imageUrl: "/rainforest.jpg",
     },
     {
@@ -68,6 +103,23 @@ function ToursPage() {
         "Local Transportation",
         "Entrance Fee to Attractions",
         "Tour Guide Services",
+      ],
+      itinerary: [
+        {
+          day: 1,
+          title: 'Mirissa',
+          duration: '3 hours',
+          description: 'Lorem ipsum dolor sit amet...',
+          imageSrc: "/surf.jpg",
+        },
+        {
+          day: 2,
+          title: 'Galle',
+          duration: '1 hours',
+          description: 'Lorem ipsum dolor sit amet...',
+          imageSrc: "/surf.jpg",
+        },
+        // Add more days...
       ],
       imageUrl: "/spa.jpg",
     },

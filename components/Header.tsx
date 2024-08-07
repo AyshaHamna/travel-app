@@ -34,7 +34,7 @@ function Header({ textColor = "text-black" }) {
       {/* mobile menu */}
       {isMenuOpen && (
        
-          <div className="fixed top-20 left-0 right-0 z-20 bg-white p-5 md:hidden rounded-lg">
+          <div className="fixed top-24 sm:top-20 left-0 right-0 z-20 bg-white p-5 md:hidden rounded-lg">
             <nav className="flex flex-col space-y-4">
               <Link href="" onClick={toggleMenu}>
                 Home
