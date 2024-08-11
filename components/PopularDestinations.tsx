@@ -33,9 +33,11 @@ function PopularDestinations() {
               <Image
                 src={destination.imageUrl}
                 alt={destination.name}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-xl"
+                fill
+                sizes="(max-width: 640px) 100vw, 
+                       (max-width: 1024px) 50vw, 
+                       25vw"
+                className="object-cover rounded-xl"
               />
             </div>
             <div className="">

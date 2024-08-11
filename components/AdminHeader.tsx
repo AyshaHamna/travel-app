@@ -5,9 +5,9 @@ import { FilePlus2 } from "lucide-react";
 
 function AdminHeader() {
   return (
-    <div className="flex justify-between bg-white shadow-sm p-5 border-b dark:bg-gray-900">
+    <div className="flex-1 flex justify-between bg-white shadow-sm p-5 border-b dark:bg-gray-900">
       <Link href="/" className="text-2xl">
-        Travel App Dashboard
+        Travel App
       </Link>
 
       <SignedIn>

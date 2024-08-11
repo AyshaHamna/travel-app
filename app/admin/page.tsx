@@ -40,6 +40,8 @@ function AdminPage() {
 
       const data = await res.json();
       console.log("Tour added: ", data);
+
+       // Optionally, clear the form and show success message here
     } catch (error) {
       console.log("Failed to add tour, ", error);
     }

@@ -36,16 +36,16 @@ function Header({ textColor = "text-black" }) {
        
           <div className="fixed top-24 sm:top-20 left-0 right-0 z-20 bg-white p-5 md:hidden rounded-lg">
             <nav className="flex flex-col space-y-4">
-              <Link href="" onClick={toggleMenu}>
+              <Link href="/" onClick={toggleMenu}>
                 Home
               </Link>
-              <Link href="" onClick={toggleMenu}>
+              <Link href="/destinations" onClick={toggleMenu}>
                 Destinations
               </Link>
-              <Link href="" onClick={toggleMenu}>
+              <Link href="/tours" onClick={toggleMenu}>
                 Tours
               </Link>
-              <Link href="" onClick={toggleMenu}>
+              <Link href="/contact" onClick={toggleMenu}>
                 Contact
               </Link>
             </nav>
@@ -69,8 +69,8 @@ function Header({ textColor = "text-black" }) {
       <div className="hidden md:flex md:space-x-10">
         {/* nav link */}
         <nav className="flex space-x-5">
-          <Link href="">Home</Link> <Link href="">Destinations</Link>{" "}
-          <Link href="">Tours</Link> <Link href="">Contact</Link>{" "}
+          <Link href="/">Home</Link> <Link href="/destinations">Destinations</Link>{" "}
+          <Link href="/tours">Tours</Link> <Link href="/contact">Contact</Link>{" "}
         </nav>
         {/* user profile */}
         <SignedOut>

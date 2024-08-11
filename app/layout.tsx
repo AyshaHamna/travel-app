@@ -8,11 +8,11 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-    <html lang="en">
-      <body className="min-h-screen h-screen overflow-y-auto flex flex-col">
-        {children}
-      </body>
+      <html lang="en">
+        <body className="min-h-screen h-screen overflow-y-auto flex flex-col">
+          {children}
+        </body>
       </html>
-      </ClerkProvider>
+    </ClerkProvider>
   );
 }
