@@ -20,7 +20,9 @@ export async function POST(req) {
 export async function GET() {
   try {
     await connectDB();
+    console.log("db connected");
     const tours = await Tour.find({});
+    console.log("--- tours --- ", tours);
     return NextResponse.json(tours, { status: 200 });
   } catch (error) {
     return NextResponse.json(
