@@ -62,7 +62,7 @@ function AddTourForm({ onCancel }: { onCancel: () => void }) {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log(
-      `${formData.name}, ${formData.duration},  ${formData.price},  ${formData.description}`
+      `${formData.name}, ${formData.duration},  ${formData.activities},  ${formData.description}`
     );
 
     try {

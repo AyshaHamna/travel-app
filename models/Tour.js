@@ -19,7 +19,7 @@ const JourneySchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 
@@ -39,6 +39,10 @@ const TourSchema = new mongoose.Schema({
   description: {
     type: String,
     required: true,
+  },
+  recommended: {
+    type: Boolean,
+    required: false,
   },
   activities: {
     type: [String],

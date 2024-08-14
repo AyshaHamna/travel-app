@@ -7,6 +7,25 @@ export async function POST(req) {
   try {
     await connectDB();
     const body = await req.json();
+
+    // Validate the request body here if needed
+    const requiredFields = [
+      "name",
+      "duration",
+      "price",
+      "description",
+      "activities",
+      "journey",
+    ];
+    for (const field of requiredFields) {
+      if (!body[field]) {
+        return NextResponse.json(
+          { error: `${field} is required` },
+          { status: 400 }
+        );
+      }
+    }
+
     const tour = new Tour(body);
     const res = await tour.save();
 
