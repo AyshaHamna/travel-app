@@ -66,7 +66,7 @@ function AddTourForm({ onCancel }: { onCancel: () => void }) {
     );
 
     try {
-      const res = await fetch("api/tours", {
+      const res = await fetch("/api/tours", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -1,24 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
-
-interface JourneyItem {
-  day: string;
-  location: string;
-  hours: string;
-  description: string;
-  image?: string; // Image is optional
-}
-
-interface Tour {
-  _id: string;
-  name: string;
-  duration: number;
-  price: number;
-  description: string;
-  recommended: boolean,
-  activities: string[];
-  journey: JourneyItem[];
-}
+import { Tour } from "@/types/tour";
 
 function ViewAllTours({ onAddTourClick }: { onAddTourClick: () => void }) {
   const [tours, setTours] = useState<Tour[]>([]);
