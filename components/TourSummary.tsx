@@ -23,7 +23,7 @@ function TourSummary() {
         and soar above stunning scenery with hot air ballooning. Witness
         majestic giants on a whale watching tour. This trip promises
         unforgettable moments and exhilarating activities amidst South Sri
-        Lanka's natural beauty.
+        Lankas natural beauty.
       </p>
       <h2 className="text-2xl font-semibold py-5">Activities</h2>
       <div className="flex flex-col sm:grid sm:grid-cols-2 gap-5 text-md">
@@ -31,8 +31,8 @@ function TourSummary() {
           {activities.map((activity, index) => (
             <li key={index}>{activity}</li>
           ))}
-              </ul>
-              <ul>
+        </ul>
+        <ul>
           {included.map((item, index) => (
             <li key={index}>{item}</li>
           ))}

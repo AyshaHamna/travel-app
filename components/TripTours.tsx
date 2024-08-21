@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import {
   Card,
@@ -12,6 +12,7 @@ import { Button } from "./ui/button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import seaImage from "/Images/sea.jpg";
+import { useRouter } from "next/navigation";
 
 // const tours = [
 //   {
@@ -57,6 +58,7 @@ interface Tour {
 function TripTours() {
   const [tours, setTours] = useState<Tour[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchTours = async () => {
@@ -85,16 +87,22 @@ function TripTours() {
     fetchTours();
   }, []);
 
+  const handleExploreClick = (tourId: string) => {
+    router.push(`/tours/${tourId}`);
+  };
+
   return (
     <section className="max-w-6xl mx-auto flex flex-col justify-around py-16">
-      <h1 className="text-4xl font-semibold text-center mb-16">Trip Tours</h1>
+      <h1 className="text-4xl font-semibold text-center mb-16 md:text-5xl">
+        Trip Tours
+      </h1>
 
-      <div className="max-w-lg sm:max-w-full mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
+      <div>
         {/* get all tours */}
         {isLoading ? (
           <div>Loading...</div>
         ) : (
-          <ul>
+          <div className="max-w-lg sm:max-w-full mx-auto grid gap-12 sm:grid-cols-2 lg:grid-cols-3">
             {tours.map((tour, index) => (
               <Card key={index} className="rounded-3xl drop-shadow-md">
                 <CardHeader>
@@ -112,7 +120,9 @@ function TripTours() {
                     </div>
                   )}
                   <CardTitle className="font-semibold">{tour.name}</CardTitle>
-                  <CardDescription>{tour.duration}</CardDescription>
+                  <CardDescription className="text-md">
+                    {tour.duration} days
+                  </CardDescription>
                 </CardHeader>
 
                 <CardFooter className="flex justify-between text-sm">
@@ -122,13 +132,16 @@ function TripTours() {
                       Rs. {tour.price}
                     </span>
                   </p>
-                  <Button className="bg-[#43B97F] hover:bg-green-700">
+                  <Button
+                    className="bg-[#43B97F] hover:bg-green-700"
+                    onClick={() => handleExploreClick(tour._id)}
+                  >
                     Explore
                   </Button>
                 </CardFooter>
               </Card>
             ))}
-          </ul>
+          </div>
         )}
       </div>
     </section>

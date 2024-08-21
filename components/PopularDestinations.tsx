@@ -23,7 +23,7 @@ const destinations = [
 function PopularDestinations() {
   return (
     <section className="max-w-6xl mx-auto py-16">
-      <h1 className="text-4xl font-semibold text-center mb-16">
+      <h1 className="text-4xl font-semibold text-center mb-16 md:text-5xl">
         Popular Destinations
       </h1>
       <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
