@@ -20,6 +20,7 @@ import seaImage from "/Images/sea.jpg";
 function ToursPage() {
   const [tours, setTours] = useState<Tour[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchTours = async () => {
@@ -40,7 +41,11 @@ function ToursPage() {
     fetchTours();
   }, []);
 
-  const router = useRouter();
+  
+
+  const handleExploreClick = (tourId: string) => {
+    router.push(`/tours/${tourId}`);
+  };
 
   const handleCardClik = (tourId: string) => {
     router.push(`tours/${tourId}`);
@@ -88,8 +93,8 @@ function ToursPage() {
                       Rs. {tour.price}
                     </span>
                   </p>
-                  <Button asChild className="bg-[#43B97F] hover:bg-green-700">
-                    <Link href="">Explore</Link>
+                  <Button className="bg-[#43B97F] hover:bg-green-700" onClick={() => handleExploreClick(tour._id)}>
+                    Explore
                   </Button>
                 </CardFooter>
               </Card>

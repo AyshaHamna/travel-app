@@ -9,13 +9,13 @@ function TourPage() {
   const [showAddForm, setShowAddForm] = useState(false);
 
   return (
-    <AdminPage>
+    <section>
       {showAddForm ? (
         <AddTourForm onCancel={() => setShowAddForm(false)} />
       ) : (
         <ViewAllTours onAddTourClick={() => setShowAddForm(true)} />
       )}
-    </AdminPage>
+    </section>
   );
 }
 export default TourPage;

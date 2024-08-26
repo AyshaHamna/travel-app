@@ -3,7 +3,7 @@ import connectDB from "@/mongodb/db";
 import { NextResponse } from "next/server";
 
 //GET: Fetch Tour from Id
-export async function GETById(req, {params}) {
+export async function GET(req, {params}) {
     try {
       await connectDB();
       console.log("db connected");

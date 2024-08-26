@@ -1,11 +1,12 @@
-import React, { ReactNode } from "react";
+import React from "react";
 
-interface AdminPageProps {
-  children: ReactNode;
-}
-
-const AdminPage: React.FC<AdminPageProps> = ({ children }) => {
-  return <div>{children}</div>;
+const AdminPage = () => {
+  return (
+    <div>
+      {/* Your admin page content goes here */}
+      admin page
+    </div>
+  );
 };
 
 export default AdminPage;

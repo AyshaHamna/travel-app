@@ -8,14 +8,23 @@ if (!MONGODB_URI) {
   );
 }
 
+let isConnected = false; // Track connection status
+
 const connectDB = async () => {
-  if (mongoose.connection?.readyState >= 1) {
-    console.log("--- Already connected to MongoDB");
+  if (isConnected) {
+    console.log("--- Already connected to MongoDB ---");
+    return;
+  }
+
+  if (mongoose.connection.readyState >= 1) {
+    isConnected = true;
+    console.log("--- MongoDB connection already established ---");
     return;
   }
 
   try {
     await mongoose.connect(MONGODB_URI!);
+    isConnected = true;
     console.log("--- Connected to MongoDB ---");
   } catch (error) {
     console.log("--- Error connecting to MongoDB ---", error);

@@ -18,6 +18,7 @@ function TourPage() {
   useEffect(() => {
     const fetchTourData = async () => {
       if (!tourId) return;
+      console.log("--- tour id ---", tourId);
 
       try {
         const res = await fetch(`/api/tours/${tourId}`);
@@ -42,7 +43,7 @@ function TourPage() {
         {isLoading ? (
           <div>Loading...</div>
         ) : !tour ? (
-          <div>Tour Not Found {tourId}</div>
+          <div>Tour Not Found</div>
         ) : (
           <div className="lg:px-8 xl:px-20">
             <TourHero name={tour.name} duration={tour.duration} />
